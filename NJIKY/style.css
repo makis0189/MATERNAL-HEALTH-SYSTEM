@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #f5f1fa;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    gap: 20px;
+}
+
+.left-image {
+    width: 50%;
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(60, 20, 100, 0.15),
+            rgba(30, 5, 55, 0.3)),
+        url(IMAGE/MATERNAL.png);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: aliceblue;
+    padding: 45px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.brand h2 {
+    font-size: 40px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #d946ef, #7c3aed);
+    object-fit: cover;
+}
+
+.image-content {
+    position: absolute;
+    left: 50px;
+    max-width: 450px;
+}
+
+.image-content p {
+    margin-top: 50px;
+    font-size: 20px;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-left: 40px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.logform {
+    width: 80%;
+    max-width: 450px;
+}
+
+.logform h2 {
+    margin-top: 10px;
+    font-size: 40px;
+    color: #171323;
+}
+
+.logform .paragraph {
+    color: #777;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.input {
+    margin-bottom: 22px;
+    position: relative;
+}
+
+.input label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: #292334;
+}
+
+.input input {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0 16px;
+    font-size: 14px;
+    outline: none;
+    padding-left: 42px;
+}
+
+.input i {
+    position: absolute;
+    left: 15px;
+    bottom: 14px;
+    color: #777;
+    z-index: 2;
+    font-size: 15px;
+}
+
+.input input:focus {
+    border-color: #8b3fd9;
+    box-shadow:
+        0 0 0 3px rgba(139, 63, 217, 0.1);
+}
+
+.input-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0 25px;
+}
+
+.input-option>div {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.input-option label {
+    font-size: 14px;
+    color: #555;
+}
+
+.input-option p {
+    margin: 0;
+    padding: 0;
+}
+
+.input-option a {
+    text-decoration: none;
+    color: #7c3aed;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    background:
+        linear-gradient(135deg,
+            #a43fd9,
+            #7c3aed);
+
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.loginform .or {
+    margin: 18px 0;
+    padding: 0;
+    text-align: center;
+    color: #777;
+    font-size: 13px;
+}
+
+.continue {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.continue a {
+    padding: 10px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 50%;
+    text-align: center;
+    color: #333;
+    transition: 0.3s;
+}
+
+.continue a:hover {
+    border-color: #8b3fd9;
+}
+
+.logform .donthave {
+    padding: 20px 0;
+    text-align: center;
+    color: #777;
+}
+
+.logform a {
+    text-decoration: none;
+}
+
+.donthave a {
+    color: #7c3aed;
+    font-weight: 600;
+}
+
+.logform footer {
+    margin-left: 50px;
+    font-size: 13px;
+    color: #777;
+}
+
+
+
+
+@media (max-width: 900px) {
+
+    .wrapper {
+        gap: 0;
+    }
+
+    .left-image {
+        width: 50%;
+        padding: 30px;
+    }
+
+    .login-form {
+        width: 50%;
+    }
+
+    .logform {
+        width: 85%;
+    }
+
+    .image-content {
+        left: 30px;
+        bottom: 70px;
+
+        max-width: 350px;
+    }
+
+    .image-content h1 {
+        font-size: 28px;
+    }
+
+    .image-content p {
+        font-size: 15px;
+    }
+}
+
+
+
+
+@media (max-width: 700px) {
+
+    .wrapper {
+        flex-direction: column;
+
+        gap: 0;
+    }
+
+    .left-image {
+        width: 100%;
+
+        min-height: 45vh;
+
+        padding: 25px;
+    }
+
+    .brand {
+        gap: 8px;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .brand h2 {
+        font-size: 20px;
+    }
+
+    .image-content {
+        position: absolute;
+
+        left: 25px;
+        right: 25px;
+        bottom: 35px;
+
+        max-width: none;
+    }
+
+    .image-content h1 {
+        font-size: 25px;
+
+        line-height: 1.2;
+
+        margin-bottom: 12px;
+    }
+
+    .image-content p {
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+    .login-form {
+        width: 100%;
+
+        min-height: 55vh;
+
+        padding: 40px 20px;
+    }
+
+    .logform {
+        width: 100%;
+
+        max-width: 450px;
+    }
+
+    .logform h2 {
+        font-size: 30px;
+    }
+
+    .logform .paragraph {
+        margin-bottom: 25px;
+    }
+
+    .input {
+        margin-bottom: 18px;
+    }
+
+    .input input {
+        width: 100%;
+
+        height: 45px;
+    }
+
+    button {
+        width: 100%;
+
+        height: 45px;
+    }
+
+    .continue {
+        width: 100%;
+
+        gap: 10px;
+    }
+
+    .continue a {
+        width: 50%;
+    }
+
+    .logform .donthave {
+        padding: 20px 0;
+    }
+
+    .logform footer {
+        margin-left: 0;
+
+        text-align: center;
+
+        font-size: 11px;
+    }
+}
+
+
+
+@media (max-width: 400px) {
+
+    .left-image {
+        min-height: 42vh;
+
+        padding: 20px;
+    }
+
+    .logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .brand h2 {
+        font-size: 18px;
+    }
+
+    .image-content {
+        left: 20px;
+        right: 20px;
+
+        bottom: 25px;
+    }
+
+    .image-content h1 {
+        font-size: 21px;
+    }
+
+    .image-content p {
+        font-size: 13px;
+    }
+
+    .login-form {
+        padding: 30px 20px;
+    }
+
+    .logform h2 {
+        font-size: 27px;
+    }
+
+    .input-option {
+        font-size: 13px;
+    }
+
+    .input-option label,
+    .input-option a {
+        font-size: 13px;
+    }
+
+    .logform footer {
+        font-size: 10px;
+
+        line-height: 1.5;
+    }
+}
