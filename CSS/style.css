@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.dash {
+
+    background: linear-gradient(135deg, #603fd9, #7c3aed);
+    width: 230px;
+    height: 127vh;
+    padding: 20px;
+}
+
+
+.dash span {
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+
+.dash span img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+
+.dash i {
+    color: white;
+    font-size: 20px;
+}
+
+
+.home {
+    padding: 20px;
+    margin-top: 10px;
+    display: flex;
+    border: 1px rgb(143, 142, 142);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+
+.home:hover {
+    background: rgba(6, 38, 216, 0.685);
+}
+
+
+.home a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+     display: none;
+}
+
+
+.main-content h1 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+.main-content p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.card i {
+    color: #603fd9;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+
+.card h3 {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+.card h2 {
+    color: #603fd9;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    margin-bottom: 5px;
+}
+
+.add-btn {
+    background: #603fd9;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.add-btn i {
+    margin-right: 6px;
+}
+
+.patient-tools {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-box i {
+    color: #777;
+    margin-right: 10px;
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+
+
+
+.patient-form-container {
+    display: none;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.patient-form-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 7px;
+    font-size: 14px;
+    color: #444;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #603fd9;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.cancel-btn,
+.save-btn {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background: #ddd;
+    font-size: 10px;
+}
+
+.save-btn {
+    background: #603fd9;
+    color: white;
+    font-size: 15px;
+}
+
+
+
+
+.patient-table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-header h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+.table-header span {
+    color: #777;
+    font-size: 14px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: #f7f7f7;
+    color: #444;
+    font-size: 14px;
+}
+
+td {
+    font-size: 14px;
+    color: #555;
+}
+
+.action-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.edit-btn {
+    color: #603fd9;
+    font-size: 10px;
+}
+
+.delete-btn {
+    color: #d33;
+    font-size: 10px;
+}
