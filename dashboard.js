@@ -33,6 +33,11 @@ Object.keys(navButtons).forEach(function (btnId) {
 
         showSection(contentId);
 
+        document.querySelectorAll(".dash .home").forEach(function (item) {
+            item.classList.remove("active");
+        });
+        btn.classList.add("active");
+
         if (contentId === "reportContent") {
             updateReports();
         }
@@ -1004,7 +1009,7 @@ logoutBtn.addEventListener("click", function (event) {
 
     event.preventDefault();
 
-    const confirmLogout = confirm("Una uhakika unataka ku-logout?");
+    const confirmLogout = confirm("Are you sure you want logout?");
 
     if (confirmLogout) {
         window.location.href = "index.html";
@@ -1025,7 +1030,6 @@ overlay.addEventListener('click', () => {
     overlay.classList.remove('active');
 });
 
-// Funga sidebar baada ya kuchagua option (hiari)
 document.querySelectorAll('.dash .home a').forEach(link => {
     link.addEventListener('click', () => {
         sidebar.classList.remove('active');
@@ -1033,3 +1037,4 @@ document.querySelectorAll('.dash .home a').forEach(link => {
     });
 });
 showSection("dashboardContent");
+document.getElementById("dashboardBtn").classList.add("active");
