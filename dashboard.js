@@ -1032,3 +1032,4 @@ document.querySelectorAll('.dash .home a').forEach(link => {
         overlay.classList.remove('active');
     });
 });
+showSection("dashboardContent");
