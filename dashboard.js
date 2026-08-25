@@ -1011,3 +1011,24 @@ logoutBtn.addEventListener("click", function (event) {
     }
 
 });
+const toggleBtn = document.getElementById('toggleBtn');
+const sidebar = document.querySelector('.dash');
+const overlay = document.getElementById('overlay');
+
+toggleBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+    overlay.classList.toggle('active');
+});
+
+overlay.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+});
+
+// Funga sidebar baada ya kuchagua option (hiari)
+document.querySelectorAll('.dash .home a').forEach(link => {
+    link.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+    });
+});
